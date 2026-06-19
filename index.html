@@ -3,55 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaxiFlow Manager | Dashboard</title>
+    <title>Maquinaria Pro 24/7</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 font-sans">
-    <div class="flex h-screen">
-        <aside class="w-64 bg-slate-900 text-white p-6">
-            <h1 class="text-2xl font-bold mb-8 text-blue-400"><i class="fas fa-taxi mr-2"></i>TaxiFlow</h1>
-            <nav class="space-y-4">
-                <a href="#" class="block py-2 px-4 bg-blue-600 rounded">Dashboard</a>
-                <a href="#" class="block py-2 px-4 hover:bg-slate-800">Flota</a>
-                <a href="#" class="block py-2 px-4 hover:bg-slate-800">Conductores</a>
-                <a href="#" class="block py-2 px-4 hover:bg-slate-800">Reportes</a>
-            </nav>
-        </aside>
-        <main class="flex-1 p-8 overflow-y-auto">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-2xl font-semibold">Resumen General</h2>
-                <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700">+ Nueva Transacción</button>
-            </div>
-            <div class="grid grid-cols-4 gap-6 mb-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                    <p class="text-gray-500 text-sm">Ingresos</p>
-                    <p class="text-2xl font-bold text-green-600">$ 150,000,000</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                    <p class="text-gray-500 text-sm">Gastos</p>
-                    <p class="text-2xl font-bold text-red-600">$ 45,000,000</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                    <p class="text-gray-500 text-sm">Saldo Neto</p>
-                    <p class="text-2xl font-bold text-blue-800">$ 105,000,000</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                    <p class="text-gray-500 text-sm">Deuda Conductor</p>
-                    <p class="text-2xl font-bold text-orange-500">$ 2,400,000</p>
-                </div>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                <h3 class="font-bold mb-4">Estado de Flota</h3>
-                <table class="w-full text-sm">
-                    <thead><tr class="text-left text-gray-500 border-b"><th class="pb-3">Placa</th><th class="pb-3">Conductor</th><th class="pb-3">Deuda</th><th class="pb-3">KM</th><th class="pb-3">Mantenimiento</th></tr></thead>
-                    <tbody class="divide-y">
-                        <tr><td class="py-4 font-bold">TX-001</td><td class="py-4">Juan Pérez</td><td class="py-4 text-red-600">$ 50,000</td><td class="py-4">120,000</td><td class="py-4"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">125,000</span></td></tr>
-                        <tr><td class="py-4 font-bold">TX-002</td><td class="py-4">Carlos Ruiz</td><td class="py-4 text-green-600">$ 0</td><td class="py-4">85,000</td><td class="py-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded">110,000</span></td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </main>
+<body class="bg-gray-900 text-white p-8">
+    <header class="mb-8">
+        <h1 class="text-3xl font-bold text-yellow-500">Gestión de Maquinaria 24/7</h1>
+        <p class="text-gray-400">Control de turnos y mantenimiento obligatorio</p>
+    </header>
+
+    <div class="grid grid-cols-3 gap-6 mb-8">
+        <div class="bg-gray-800 p-6 rounded-lg border-l-4 border-green-500">
+            <h3 class="text-gray-400">Operativas</h3>
+            <p class="text-3xl font-bold">8</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg border-l-4 border-yellow-500">
+            <h3 class="text-gray-400">En Mantenimiento</h3>
+            <p class="text-3xl font-bold">2</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg border-l-4 border-blue-500">
+            <h3 class="text-gray-400">Total Flota</h3>
+            <p class="text-3xl font-bold">10</p>
+        </div>
+    </div>
+
+    <div class="bg-gray-800 rounded-lg p-6 overflow-x-auto">
+        <table class="w-full text-sm">
+            <thead>
+                <tr class="text-gray-400 border-b border-gray-700">
+                    <th class="p-4 text-left">Máquina</th>
+                    <th class="p-4 text-left">Estado</th>
+                    <th class="p-4 text-center">Programación 24h</th>
+                    <th class="p-4 text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b border-gray-700">
+                    <td class="p-4 font-bold text-yellow-500">MAQ-001</td>
+                    <td class="p-4"><span class="bg-green-900 text-green-300 px-2 py-1 rounded">Operativo</span></td>
+                    <td class="p-4 flex gap-1 justify-center">
+                        <div class="w-8 h-8 bg-green-600 rounded"></div>
+                        <div class="w-8 h-8 bg-yellow-600 rounded"></div>
+                        <div class="w-8 h-8 bg-green-600 rounded"></div>
+                    </td>
+                    <td class="p-4 text-center"><button class="bg-gray-700 px-3 py-1 rounded hover:bg-gray-600">Editar</button></td>
+                </tr>
+                <tr class="border-b border-gray-700">
+                    <td class="p-4 font-bold text-yellow-500">MAQ-002</td>
+                    <td class="p-4"><span class="bg-yellow-900 text-yellow-300 px-2 py-1 rounded">Mantenimiento</span></td>
+                    <td class="p-4 flex gap-1 justify-center">
+                        <div class="w-8 h-8 bg-yellow-600 rounded"></div>
+                        <div class="w-8 h-8 bg-green-600 rounded"></div>
+                        <div class="w-8 h-8 bg-green-600 rounded"></div>
+                    </td>
+                    <td class="p-4 text-center"><button class="bg-gray-700 px-3 py-1 rounded hover:bg-gray-600">Editar</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
