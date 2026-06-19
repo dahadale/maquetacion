@@ -1,1 +1,56 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Dashboard Minero</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet"><style>body{font-family:Inter,sans-serif;}.mono{font-family:'JetBrains Mono',monospace;}</style></head><body class="bg-zinc-950 text-zinc-200 p-4 md:p-10"><div class="max-w-7xl mx-auto space-y-8"><header class="border-b border-zinc-800 pb-6"><h1 class="text-3xl font-bold tracking-tighter text-white">CONTROL MAQUINARIA PESADA</h1><p class="text-zinc-500 text-sm mono">SISTEMA STATUS: ONLINE // GESTIÓN DE FLOTA</p></header><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"><div class="bg-zinc-900 border border-zinc-800 p-6 rounded-lg"><p class="text-xs text-zinc-500 uppercase">Disponibilidad</p><p class="text-3xl font-bold text-white mono">94.2%</p></div><div class="bg-zinc-900 border border-zinc-800 p-6 rounded-lg"><p class="text-xs text-zinc-500 uppercase">Alertas</p><p class="text-3xl font-bold text-red-500 mono">03</p></div><div class="bg-zinc-900 border border-zinc-800 p-6 rounded-lg"><p class="text-xs text-zinc-500 uppercase">Consumo Total</p><p class="text-3xl font-bold text-white mono">1,240 Gal</p></div><div class=\"bg-zinc-900 border border-zinc-800 p-6 rounded-lg\"><p class=\"text-xs text-zinc-500 uppercase\">Eficiencia</p><p class=\"text-3xl font-bold text-white mono\">88%</p></div></div><div class="bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden"><table class="w-full text-left"><thead class="bg-zinc-950 border-b border-zinc-800 text-[10px] uppercase text-zinc-500"><tr><th class="p-4">ID Máquina</th><th class="p-4">Estado</th><th class="p-4">Horas</th><th class="p-4">Lugar</th><th class="p-4">Responsable</th><th class="p-4">Combustible</th></tr></thead><tbody class="divide-y divide-zinc-800 text-sm mono"><tr><td class="p-4 text-white font-bold">CAT-320X</td><td class="p-4 text-emerald-400">OPERATIVO</td><td class="p-4">1250</td><td class="p-4">Cantera Norte</td><td class="p-4 flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-blue-900 flex items-center justify-center font-bold text-xs">CR</div>Carlos Ruiz</td><td class="p-4">45.0 L</td></tr><tr><td class="p-4 text-white font-bold">D8T-MAX</td><td class="p-4 text-yellow-400">EN MANTENIMIENTO</td><td class="p-4">840</td><td class="p-4">Taller Central</td><td class="p-4 flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-purple-900 flex items-center justify-center font-bold text-xs">AM</div>Ana Méndez</td><td class="p-4">62.5 L</td></tr><tr><td class="p-4 text-white font-bold">966L-HD</td><td class="p-4 text-blue-400">PROGRAMADO</td><td class="p-4">2100</td><td class="p-4">Planta Sur</td><td class="p-4 flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-orange-900 flex items-center justify-center font-bold text-xs">LS</div>Luis Solís</td><td class="p-4">38.2 L</td></tr></tbody></table></div></div></body></html>
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>body{background-color:#09090b; font-family:sans-serif;}</style>
+</head>
+<body class="text-zinc-100 p-8">
+    <div class="max-w-6xl mx-auto space-y-8">
+        <header>
+            <h1 class="text-3xl font-bold">Control de Suministros de Agua</h1>
+        </header>
+
+        <!-- Dashboard KPIs -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-zinc-900 p-6 rounded-lg border border-zinc-800">
+                <p class="text-zinc-500 text-sm">Consumo Total</p>
+                <p class="text-4xl font-bold text-blue-400">1,240 <span class="text-base text-zinc-500">unidades</span></p>
+            </div>
+            <div class="bg-zinc-900 p-6 rounded-lg border border-zinc-800">
+                <p class="text-zinc-500 text-sm">Costo Total</p>
+                <p class="text-4xl font-bold text-emerald-400">$8,450.00</p>
+            </div>
+            <div class="bg-zinc-900 p-6 rounded-lg border border-zinc-800">
+                <p class="text-zinc-500 text-sm">Proyección Mensual</p>
+                <p class="text-4xl font-bold text-amber-400">2,100 <span class="text-base text-zinc-500">uds</span></p>
+            </div>
+        </div>
+
+        <!-- Simulación Gráfico -->
+        <div class="bg-zinc-900 p-8 rounded-lg border border-zinc-800 h-64 flex items-end gap-4">
+            <div class="bg-blue-600 w-16 h-3/4"></div>
+            <div class="bg-blue-600 w-16 h-1/2"></div>
+            <div class="bg-blue-600 w-16 h-full"></div>
+            <div class="bg-blue-600 w-16 h-2/3"></div>
+            <div class="bg-blue-600 w-16 h-5/6"></div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="bg-zinc-900 p-8 rounded-lg border border-zinc-800">
+            <h2 class="text-xl font-semibold mb-6">Registrar Entrega</h2>
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <select class="bg-zinc-800 p-3 rounded border border-zinc-700">
+                    <option>Agua en Botella</option>
+                    <option>Agua para Dispensador</option>
+                </select>
+                <input type="number" placeholder="Cantidad" class="bg-zinc-800 p-3 rounded border border-zinc-700">
+                <input type="date" class="bg-zinc-800 p-3 rounded border border-zinc-700">
+                <input type="text" placeholder="Nombre del receptor" class="bg-zinc-800 p-3 rounded border border-zinc-700">
+                <button class="bg-blue-600 hover:bg-blue-700 p-3 rounded font-bold col-span-full">Guardar Registro</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
