@@ -1,56 +1,32 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang='es'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>body{background-color:#09090b; font-family:sans-serif;}</style>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <script src='https://cdn.tailwindcss.com'></script>
+    <title>TaxiFleet Manager</title>
 </head>
-<body class="text-zinc-100 p-8">
-    <div class="max-w-6xl mx-auto space-y-8">
-        <header>
-            <h1 class="text-3xl font-bold">Control de Suministros de Agua</h1>
-        </header>
-
-        <!-- Dashboard KPIs -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-zinc-900 p-6 rounded-lg border border-zinc-800">
-                <p class="text-zinc-500 text-sm">Consumo Total</p>
-                <p class="text-4xl font-bold text-blue-400">1,240 <span class="text-base text-zinc-500">unidades</span></p>
+<body class='bg-gray-100'>
+    <div class='min-h-screen flex'>
+        <aside class='w-64 bg-slate-800 text-white p-6'>
+            <h1 class='text-2xl font-bold mb-8'>TaxiManager</h1>
+            <nav><ul><li class='mb-4'>Dashboard</li><li class='mb-4'>Conductores</li><li class='mb-4'>Vehículos</li></ul></nav>
+        </aside>
+        <main class='flex-1 p-8'>
+            <div class='grid grid-cols-4 gap-4 mb-8'>
+                <div class='bg-white p-4 rounded shadow'>Ingresos: $15,000</div>
+                <div class='bg-white p-4 rounded shadow'>Gastos: $4,000</div>
+                <div class='bg-white p-4 rounded shadow'>Balance: $11,000</div>
+                <div class='bg-white p-4 rounded shadow'>Deudas: $2,500</div>
             </div>
-            <div class="bg-zinc-900 p-6 rounded-lg border border-zinc-800">
-                <p class="text-zinc-500 text-sm">Costo Total</p>
-                <p class="text-4xl font-bold text-emerald-400">$8,450.00</p>
+            <div class='bg-white p-6 rounded shadow'>
+                <h2 class='text-xl mb-4'>Estado de Flota</h2>
+                <table class='w-full text-left'>
+                    <thead><tr><th>Taxi</th><th>Conductor</th><th>Km</th><th>Mantenimiento</th></tr></thead>
+                    <tbody><tr><td>TAXI-001</td><td>Juan Pérez</td><td>120,000</td><td>15/10/2023</td></tr></tbody>
+                </table>
             </div>
-            <div class="bg-zinc-900 p-6 rounded-lg border border-zinc-800">
-                <p class="text-zinc-500 text-sm">Proyección Mensual</p>
-                <p class="text-4xl font-bold text-amber-400">2,100 <span class="text-base text-zinc-500">uds</span></p>
-            </div>
-        </div>
-
-        <!-- Simulación Gráfico -->
-        <div class="bg-zinc-900 p-8 rounded-lg border border-zinc-800 h-64 flex items-end gap-4">
-            <div class="bg-blue-600 w-16 h-3/4"></div>
-            <div class="bg-blue-600 w-16 h-1/2"></div>
-            <div class="bg-blue-600 w-16 h-full"></div>
-            <div class="bg-blue-600 w-16 h-2/3"></div>
-            <div class="bg-blue-600 w-16 h-5/6"></div>
-        </div>
-
-        <!-- Formulario -->
-        <div class="bg-zinc-900 p-8 rounded-lg border border-zinc-800">
-            <h2 class="text-xl font-semibold mb-6">Registrar Entrega</h2>
-            <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <select class="bg-zinc-800 p-3 rounded border border-zinc-700">
-                    <option>Agua en Botella</option>
-                    <option>Agua para Dispensador</option>
-                </select>
-                <input type="number" placeholder="Cantidad" class="bg-zinc-800 p-3 rounded border border-zinc-700">
-                <input type="date" class="bg-zinc-800 p-3 rounded border border-zinc-700">
-                <input type="text" placeholder="Nombre del receptor" class="bg-zinc-800 p-3 rounded border border-zinc-700">
-                <button class="bg-blue-600 hover:bg-blue-700 p-3 rounded font-bold col-span-full">Guardar Registro</button>
-            </form>
-        </div>
+        </main>
     </div>
 </body>
 </html>
